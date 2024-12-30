@@ -2,8 +2,6 @@ import { useState, useCallback, useEffect, useRef } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-//import Youtube from './Youtube'
-//import Card from './components/card'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
 import {InputBox} from './components/index.js'
 
@@ -43,8 +41,8 @@ function App() {
                 selectedCurrency = {from}            
                 /> 
             </div>
-            <div className='relative w-full h-0.5'>
-              <button className='absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5' 
+            <div className='w-full mb-1'>
+              <button className='left-1/2 -translate-x-1/4 -translate-y-1 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5' 
                       onClick={swap}>
                 Swap
               </button>
@@ -72,53 +70,3 @@ function App() {
 
 
 export default App
-
-/*
-  <>
-    //STATE
-
-    const username = 'Riven';
-
-    const addValue = () => {
-      setCounter(prevcounter => prevcounter+=1)
-      setCounter(prevcounter => prevcounter+=1)
-    }
-
-    const removeValue = () => {
-      setCounter(prevcounter => prevcounter-=1);
-    }
-      
-    <h1 className='text 3xl bg-green-500 p-3 rounded-md'>Vite React App</h1>
-    <h1>React Course With : {username}</h1>
-    <h2>Counter Value : {counter}</h2>
-    <button onClick={addValue}>Add Value</button>{" "}
-    <button onClick={removeValue}>Remove Value</button>
-    <p>footer: </p>
-    <Card username="hitesh"/>
-    <Card username="jason" post="Staff Eng"/>
-    <Card />
-
-    ---------------------------------------------------------------
-    //BG CHANGER
-    const [color,setColor] = useState('olive')
-
-    return (
-      <div className='w-96 h-screen duration-200' style={{backgroundColor: color}}>
-        <div className='fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2 bg-black'>
-          <div className='flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-3xl'>
-            <button onClick={() => setColor('red')} 
-                    className='outline-none px-4 py-1 rounded-full text-black shadow-lg'
-                    style={{backgroundColor: 'red'}}>
-              Red
-            </button>
-            <button onClick={() => {setColor('blue')}} 
-                    className='outline-none px-4 py-1 rounded-full text-black shadow-lg'
-                    style={{backgroundColor: 'blue'}}>
-              Blue
-            </button>
-          </div>
-        </div>
-      </div>
-    )
-  </>
-*/
